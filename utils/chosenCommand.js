@@ -1,6 +1,6 @@
 //Create switch case for all different options
 const connection = require('../db/connection.js')
-
+const {viewEmps} = require('./viewCommands')
 const chosen = function(answers){
     switch(answers.choice){
       case 'View all departments':
