@@ -1,4 +1,6 @@
 //Create switch case for all different options
+const connection = require('../db/connection.js')
+
 const chosen = function(answers){
     switch(answers.choice){
       case 'View all departments':
@@ -26,6 +28,7 @@ const chosen = function(answers){
         console.log('Connection to database terminated.')
         console.log('Thanks for using Employee Manager!')
         console.log('Goodbye!')
+        connection.end();
         break;
     }
   }
