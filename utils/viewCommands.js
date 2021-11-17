@@ -1,9 +1,26 @@
 const connection = require('../db/connection.js');
 const conTab = require('console.table');
 
+
+//Displays all Roles in DB
+viewRoles = () => {
+    console.log('Displaying all roles!\n');
+    let query = `SELECT roles.id, roles.title AS roles, department.dep_name as department
+                FROM roles
+                INNER JOIN department ON roles.department_id = department.id`;
+
+    connection.query(query, function (err, res) {
+        if (err) throw err;
+
+        console.table(res);
+        connection.end();
+    })
+};
+
+//Displays all Employees in DB
 viewEmps = () => {
-    console.log('Showing all employees...\n');
-    var query = `SELECT employee.id, 
+    console.log('Displaying all Employees!\n');
+    let query = `SELECT employee.id, 
                 employee.first_name, 
                 employee.last_name, 
                 roles.title, 
