@@ -115,4 +115,4 @@ const mainMenuPrompt = [ {
     }
   ];
 
-  module.exports = {mainMenuPrompt};
+  module.exports = {mainMenuPrompt,addDeptPrompt, addRolePrompt, addEmpPrompt, updateEmpPrompt};

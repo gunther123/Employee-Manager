@@ -23,7 +23,10 @@ const chosen = function(answers){
         updateEmpRole();
         break;
       default:
-        closeApp();
+        console.log('Connection to database terminated.')
+        console.log('Thanks for using Employee Manager!')
+        console.log('Goodbye!')
+        break;
     }
   }
   module.exports = {chosen};

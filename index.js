@@ -1,7 +1,7 @@
 const mysql = require('mysql2');
 const inquirer = require('inquirer');
 const conTab = require('console.table');
-const {mainMenuPrompt} = require('./utils/prompts');
+const {mainMenuPrompt, addDeptPrompt, addRolePrompt, addEmpPrompt, updateEmpPrompt} = require('./utils/prompts');
 const {chosen} = require('./utils/chosenCommand');
 
 
@@ -18,6 +18,7 @@ connection.connect(err => {
     console.log(`You've connected to the org Database!`);
 
     promptUsers();
+    connection.end();
 });
 
 //Prompts the user to choose what to do in the app
