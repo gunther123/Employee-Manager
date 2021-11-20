@@ -59,7 +59,7 @@ const mainMenuPrompt = [ {
       }
   ];
   
-  const addEmpPrompt =[
+  const addEmpNamePrompt =[
     {
       type: 'input',
       name: 'fistName',
@@ -85,28 +85,31 @@ const mainMenuPrompt = [ {
             return false;
         }
       }
-    },
+    }
+  ];
+
+  const addEmpRolePrompt = [
     {
       type: 'list',
       name: 'role',
       message: "What is the employee's role?",
-      choices: ['tbd']
+      choices: []
     }
-  ];
+  ]
 
   const updateEmpPrompt = [
     {
       type: 'list',
       name: 'name',
       message: "Which employee would you like to update?",
-      choices: ['tbd']
+      choices: []
     },
     {
       type: 'list',
       name: 'role',
       message: "What is the employee's new role?",
-      choices: ['tbd']
+      choices: []
     }
   ];
 
-  module.exports = {mainMenuPrompt,addDeptPrompt, addRolePrompt, addEmpPrompt, updateEmpPrompt};
+  module.exports = {mainMenuPrompt,addDeptPrompt, addRolePrompt, addEmpNamePrompt, addEmpRolePrompt, updateEmpPrompt};
