@@ -10,7 +10,7 @@ viewDepts = () => {
 
         console.table(res);
         
-        promptUser();
+        connection.end();
     })
 };
 
