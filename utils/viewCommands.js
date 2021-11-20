@@ -1,6 +1,19 @@
 const connection = require('../db/connection.js');
 const conTab = require('console.table');
 
+viewDepts = () => {
+    console.log('Displaying all departments!\n');
+    var query = `SELECT department.id, department.dep_name AS department FROM department`;
+
+    connection.query(query, function (err, res) {
+        if (err) throw err;
+
+        console.table(res);
+        
+        promptUser();
+    })
+};
+
 
 //Displays all Roles in DB
 viewRoles = () => {
@@ -39,4 +52,4 @@ viewEmps = () => {
         connection.end();
     })};
 
-module.exports = {viewEmps};
+module.exports = {viewEmps, viewRoles, viewDepts};
