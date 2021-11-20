@@ -2,7 +2,7 @@ const mysql = require('mysql2');
 const connection = require('./db/connection.js')
 const inquirer = require('inquirer');
 const conTab = require('console.table');
-const {mainMenuPrompt, addDeptPrompt, addRolePrompt, addEmpPrompt, updateEmpPrompt} = require('./utils/prompts');
+const {mainMenuPrompt, addDeptPrompt, addRolePrompt, addEmpPrompt, updateEmpPrompt} = require('./utils/prompts/prompts.js');
 const {chosen} = require('./utils/chosenCommand');
 
 

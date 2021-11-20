@@ -56,12 +56,6 @@ const mainMenuPrompt = [ {
               return false;
           }
         }
-      },
-      {
-        type: 'list', 
-        name: 'dept',
-        message: "What department is this role in?",
-        choices: ['tbd']
       }
   ];
   
