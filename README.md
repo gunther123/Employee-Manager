@@ -5,6 +5,8 @@
 
 This app is to manage all your current employees, roles, and departments.
 
+https://watch.screencastify.com/v/SFrQ8Mh6LpeSsjSvTj48
+
 
 ## Table of Contents 
 
