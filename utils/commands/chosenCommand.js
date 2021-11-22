@@ -1,7 +1,8 @@
 //Create switch case for all different options
-const connection = require('../db/connection.js')
+const connection = require('../../db/connection.js')
 const {viewEmps,viewRoles, viewDepts} = require('./viewCommands')
 const {addDept, addRole, addEmp} = require('./addCommands')
+const updateEmpRole = require('./updateCommand')
 
 const chosen = function(answers){
     switch(answers.choice){

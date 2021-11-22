@@ -1,6 +1,6 @@
-const connection = require('../db/connection.js')
+const connection = require('../../db/connection.js')
 const inquirer = require('inquirer')
-const {addDeptPrompt, addRolePrompt, addEmpNamePrompt, addEmpRolePrompt} = require('./prompts/prompts')
+const {addDeptPrompt, addRolePrompt, addEmpNamePrompt, addEmpRolePrompt} = require('../prompts/prompts')
 const {viewDepts, viewRoles, viewEmps} = require('./viewCommands');
 
 

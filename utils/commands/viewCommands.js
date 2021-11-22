@@ -1,5 +1,6 @@
-const connection = require('../db/connection.js');
+const connection = require('../../db/connection.js');
 const conTab = require('console.table');
+const {promptUsers} = require('./promptUser')
 
 viewDepts = () => {
     console.log('Displaying all departments!\n');
@@ -10,7 +11,7 @@ viewDepts = () => {
 
         console.table(res);
         
-        connection.end();
+        promptUsers()
     })
 };
 
@@ -26,7 +27,7 @@ viewRoles = () => {
         if (err) throw err;
 
         console.table(res);
-        connection.end();
+        promptUsers();
     })
 };
 
@@ -49,7 +50,7 @@ viewEmps = () => {
         if (err) throw err;
 
         console.table(res);
-        connection.end();
+        promptUsers()
     })};
 
 module.exports = {viewEmps, viewRoles, viewDepts};
